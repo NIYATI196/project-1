@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #e23744; /* Red theme */
+    color: white;
+}
+
+.logo img {
+    width: 150px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #ffd1d1; /* Light red/pinkish hover */
+}
+
+/* Main Content */
+main {
+    background-image: url('/img/bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 120px 200px;
+    color: white;
+}
+
+main img {
+    width: 300px;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+main p {
+    font-size: 24px;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    main img {
+        width: 200px;
+    }
+
+    main p {
+        font-size: 20px;
+    }
+}
